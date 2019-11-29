@@ -1,0 +1,114 @@
+<div data-action="updateButtonEditorFields->button-editor#updateButtonEditorFields"
+     data-controller="button-editor" id="button-editor-wrapper">
+  <div class="button-editor columns">
+    <div class="button-editor-form columns column is-4">
+      <div class="column">
+        <input type="hidden"
+               id="button-editor-id"
+               value=""
+               data-target="button-editor.buttonEditorId"
+               data-action="input->button-editor#buttonEditorChanged">
+
+        <div class="field has-addons">
+          <div class="control is-expanded has-icons-left">
+            <input id="button-editor-angle"
+                   class="input is-fullwidth is-small"
+                   type="number"
+                   placeholder="Angle"
+                   data-target="button-editor.buttonEditorAngle"
+                   data-action="input->button-editor#buttonEditorChanged">
+            <div class="icon is-small is-left">
+              <i class="fas fa-sun"></i>
+            </div>
+          </div>
+        </div>
+        
+        <div class="field has-addons">
+          <div class="control is-expanded has-icons-left">
+            <input id="button-editor-title"
+                   class="input is-fullwidth is-small"
+                   type="text"
+                   placeholder="Title"
+                   data-target="button-editor.buttonEditorTitle"
+                   data-action="keyup->button-editor#buttonEditorChanged">
+            <div class="icon is-small is-left">
+              <i class="fas fa-heading"></i>
+            </div>
+          </div>
+          <div class="control">
+            <div id="button-editor-title-color"></div>
+          </div>
+        </div>
+  
+        <div class="field has-addons">
+          <div class="control is-expanded has-icons-left">
+            <input id="button-editor-subtitle"
+                   class="input is-fullwidth is-small"
+                   type="text"
+                   placeholder="Subtitle"
+                   data-target="button-editor.buttonEditorSubtitle"
+                   data-action="keyup->button-editor#buttonEditorChanged">
+            <div class="icon is-small is-left">
+              <i class="fas fa-subscript"></i>
+            </div>
+          </div>
+          <div class="control">
+            <div id="button-editor-subtitle-color"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="field has-addons pt-5">
+          <div class="control is-expanded">
+          <label class="label is-small">Background Color:</label>
+          </div>
+          <div class="control">
+          <div id="button-editor-background-color"></div>
+          </div>
+        </div>
+
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <label class="label is-small">Background Image:</label>
+          </div>
+          <div class="control">
+            <div id="button-editor-background-image"></div>
+        </div>
+        </div>
+      </div>
+    </div>    
+
+    <svg id="button-editor-preview">
+      <g>
+        <rect class="outer-button" width="125" height="125" rx="5" ry="5" fill="#868686"></rect>
+        <rect class="inner-button" width="100" height="100" x="12" y="12" rx="5" ry="5" fill="white"></rect>
+        <text class="title" x="16" y="62" style="font-size: 60px;" fill="blue"></text>
+        <text class="subtitle" x="82" y="104" style="font-size: 40px;" fill="green"></text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="canvas-options columns">
+    <div class="column">
+      <button id="button-editor-apply"
+              class="button is-danger is-small"
+              type="submit"
+              data-action="button-editor#buttonEditorClear">
+        Back to defaults
+      </button>
+      <button id="button-editor-save-default"
+              class="button is-info is-small"
+              type="submit"
+              data-action="button-editor#buttonEditorSaveDefaults">
+        Update defaults
+      </button>
+      <button id="button-editor-apply"
+              class="button is-primary is-small"
+              type="submit"
+              data-action="button-editor#buttonEditorApply">
+        Apply
+      </button>
+    </div>
+  </div>
+</div>

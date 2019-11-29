@@ -1,0 +1,123 @@
+<div class="canvas-head columns">
+  <div id="git" class="columns">
+    <div class="column is-3">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input is-fullwidth"
+                 type="text"
+                 placeholder="New Keyboard Name"
+                 data-target="canvas.newKeyboard">
+        </div>
+        <div class="control">
+          <a class="button is-primary"
+             data-action="click->canvas#createKeyboard">
+            Add
+          </a>
+        </div>
+      </div>
+
+      <div id="keyboards-select-wrapper" class="field">
+        <div class="control has-icons-left">
+          <div class="select is-fullwidth is-hidden-arrow">
+            <select id="keyboards-select"
+                    name="keyboards[]"
+                    data-action="canvas#checkoutKeyboard"></select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-keyboard"></i>
+          </div>
+        </div>
+        <p class="help">
+          Select or create new keyboard.
+        </p>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input is-fullwidth"
+                 type="text"
+                 placeholder="New Branch Name"
+                 data-target="canvas.newBranch">
+        </div>
+        <div class="control">
+          <a class="button is-primary"
+             data-action="click->canvas#createBranch">
+            Add
+          </a>
+        </div>
+      </div>
+
+      <div id="branches-select-wrapper" class="field">
+        <div class="control has-icons-left">
+          <div class="select is-fullwidth is-hidden-arrow">
+            <select id="branches-select"
+                    name="branches[]"
+                    data-action="canvas#checkoutBranch"></select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-code-branch"></i>
+          </div>
+        </div>
+        <p class="help">
+          Checkout or create new branch.
+        </p>
+      </div>
+    </div>
+
+    <div class="column is-6">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input is-fullwidth"
+                 type="text"
+                 placeholder="New Commit Name"
+                 data-target="canvas.message">
+        </div>
+        <div class="control">
+          <a class="button is-primary" data-action="click->canvas#commit">
+            Add
+          </a>
+        </div>
+      </div>
+
+      <div id="commits-select-wrapper" class="field">
+        <div class="control has-icons-left">
+          <div class="select is-fullwidth is-hidden-arrow">
+            <select id="commits-select"
+                    name="commits[]"
+                    data-action="canvas#checkoutCommit"></select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+        <p class="help">
+          Checkout or create new commit.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toggle-editors">
+    <div id="toggle-layout-editor"
+         class="icon is-small is-left has-background-info"
+         data-action="click->canvas#toggleLayoutEditor">
+      <i class="fas fa-keyboard"></i>
+    </div>
+
+    <div id="toggle-code-editor"
+         class="icon is-small is-left has-background-white"
+         data-action="click->canvas#toggleCodeEditor">
+      <i class="fas fa-code"></i>
+    </div>
+  </div>
+</div>
+
+<div class="columns">
+  <div id="commit-preview-wrapper" class="column is-6 is-pulled-left is-hidden">
+    <div id="commit-preview">
+      <img alt=""/>
+    </div>
+  </div>
+</div>

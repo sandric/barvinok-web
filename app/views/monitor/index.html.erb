@@ -1,0 +1,31 @@
+<div class="monitor-options is-clearfix mb-10">
+  <div class="filters is-pulled-left">
+    <button class="button is-small is-info"
+            data-action="monitor#displayAll"
+            data-target="monitor.displayAllButton">
+      All
+    </button>
+    <button class="button is-small"
+            data-action="monitor#displayWarnings"
+            data-target="monitor.displayWarningsButton">
+      Warnings
+    </button>
+    <button class="button is-small"
+            data-action="monitor#displayErrors"
+            data-target="monitor.displayErrorsButton">
+      Errors
+    </button>
+  </div>
+
+  <div class="filters is-pulled-right">
+    <a class="button is-danger is-small"
+       data-action="monitor#clear">
+      <span>Clear</span>
+      <span class="icon is-small">
+        <i class="fas fa-times"></i>
+      </span>
+    </a>
+  </div>
+</div>
+
+<div id="monitor"></div>

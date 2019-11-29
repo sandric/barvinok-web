@@ -1,0 +1,25 @@
+<div id="layout-editor-wrapper" data-controller="layout-editor">
+  <div class="layout-editor-actions columns">
+    <div class="column has-text-right">
+      <button id="layout-editor-remove"
+              class="button is-small is-danger"
+              type="submit"
+              data-action="layout-editor#removeButtons">
+        Remove Buttons
+      </button>
+      <button id="layout-editor-unselect"
+              class="button is-small"
+              type="submit"
+              data-action="layout-editor#unselectButtons">
+        Unselect Buttons
+      </button>
+      <button id="layout-editor-append"
+              class="button is-small is-success"
+              type="submit"
+              data-action="layout-editor#generateCode">
+        Generate Code
+      </button>
+    </div>
+  </div>
+  <svg id="layout-editor" width="100%"/>
+</div>

@@ -1,0 +1,106 @@
+<div class="options is-clearfix">
+  <div class="columns" style="margin-bottom: 20px">
+    <div id="keyboards-select-wrapper" class="column is-3">
+      <div class="field">
+        <div class="control has-icons-left">
+          <div class="select is-fullwidth is-hidden-arrow">
+            <select id="keyboards-select"
+                    name="keyboards[]"
+                    data-action="legends#checkoutKeyboard"></select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-keyboard"></i>
+          </div>
+        </div>
+        <p class="help">
+          Select keyboard.
+        </p>
+      </div>
+    </div>
+
+    <div id="branches-select-wrapper" class="column is-3">
+      <div class="field">
+        <div class="control has-icons-left">
+          <div class="select is-fullwidth is-hidden-arrow">
+            <select id="branches-select"
+                    name="branches[]"
+                    data-action="legends#checkoutBranch"></select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-code-branch"></i>
+          </div>
+        </div>
+        <p class="help">
+          Checkout branch.
+        </p>
+      </div>
+    </div>
+
+    <div id="commits-select-wrapper" class="column is-6">
+      <div class="field">
+        <div class="control has-icons-left">
+          <div class="select is-fullwidth is-hidden-arrow">
+            <select id="commits-select"
+                    name="commits[]"
+                    data-action="legends#checkoutCommit"></select>
+          </div>
+          <div class="icon is-small is-left">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+        <p class="help">
+          Checkout commit.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div id="commit-preview-wrapper"
+         class="column is-6 is-pulled-left is-hidden">
+      <div id="commit-preview">
+        <img alt=""/>
+      </div>
+    </div>
+  </div>
+  
+  <div class="display-options is-pulled-left">
+    <button class="button is-small is-link is-danger"
+            type="submit"
+            data-action="click->legends#showAll"
+            data-target="legends.displayAllButton">
+      All
+    </button>
+    <button class="button is-small is-link"
+            type="submit"
+            data-action="click->legends#showOnlyBackground"
+            data-target="legends.displayBackgroundButton">
+      Only Background
+    </button>
+    <button class="button is-small is-link"
+            type="submit"
+            data-action="click->legends#showOnlyTitle"
+            data-target="legends.displayTitleButton">
+      Only Title
+    </button>
+    <button class="button is-small is-link"
+            type="submit"
+            data-action="click->legends#showOnlySubtitle"
+            data-target="legends.displaySubtitleButton">
+      Only Subtitle
+    </button>
+  </div>
+
+  <div class="export-options is-pulled-right">
+    <button class="button is-small is-primary"
+            type="submit"
+            data-action="click->legends#exportPNGLeft">
+      Export Left to PNG
+    </button>
+    <button class="button is-small is-primary"
+            type="submit"
+            data-action="click->legends#exportPNGRight">
+      Export Right to PNG
+    </button>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BarvinokWeb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= Gon::Base.render_data %>
+    <div id="loading-wrapper" class="is-hidden">
+      <div id="loading-spinner">
+        <i class="fas fa-spinner"></i>
+      </div>
+    </div>
+
+    <%= render "shared/navbar" %>
+
+    <section id="<%= controller_name %>-controller"
+             class="section main-section"
+             data-controller="<%= controller_name %>">
+      <%= yield %>
+    </section>
+
+    <%= render "shared/footer" %>
+  </body>
+</html>

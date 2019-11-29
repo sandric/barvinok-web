@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to canvas_path, class: "navbar-item" do %>
+      <%= image_tag asset_pack_path('media/images/shared/barvinok_full_red.png') %>
+    <% end %>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Canvas",
+            canvas_path,
+            class: "navbar-item #{controller.controller_name == 'canvas' ? 'is-active':''}" %>
+      <%= link_to "Legends",
+            legends_path,
+            class: "navbar-item #{controller.controller_name == 'legends' ? 'is-active':''}" %>
+      <%= link_to "Scratch",
+            scratch_index_path,
+            class: "navbar-item #{controller.controller_name == 'scratch' ? 'is-active':''}" %>
+      <%= link_to "Monitor",
+            monitor_index_path,
+            class: "navbar-item #{controller.controller_name == 'monitor' ? 'is-active':''}" %>
+      <%= link_to "Settings",
+            edit_settings_path,
+            class: "navbar-item #{controller.controller_name == 'settings' ? 'is-active':''}" %>
+
+      <a class="navbar-item">Docs</a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <%= render "shared/github_corner" %>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,105 @@
+<%= form_with model: @settings_form,
+              url: { action: 'update' },
+              html: { method: 'put', class: 'settings-form' } do |f| %>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Git Directory</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.text_field :git_path, class: "input #{@settings_form.errors[:git_path].empty? ? '' : 'is-danger'}" %>
+        </div>
+        <p class="help">
+          Git Directory full path.
+        </p>
+        <% @settings_form.errors.messages[:git_path].each do |error| %>
+          <p class="help is-danger"> <%=  error %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Git Username</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.text_field :git_user_name, class: "input #{@settings_form.errors[:git_user_name].empty? ? '' : 'is-danger'}" %>
+        </div>
+        <p class="help">
+          Git Username to be committed.
+        </p>
+        <% @settings_form.errors.messages[:git_user_name].each do |error| %>
+          <p class="help is-danger"> <%=  error %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Git First Name</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.text_field :git_first_name, class: "input #{@settings_form.errors[:git_first_name].empty? ? '' : 'is-danger'}" %>
+        </div>
+        <p class="help">
+          Git user first name to be committed.
+        </p>
+        <% @settings_form.errors.messages[:git_first_name].each do |error| %>
+          <p class="help is-danger"> <%=  error %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Git Last Name</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.text_field :git_last_name, class: "input #{@settings_form.errors[:git_last_name].empty? ? '' : 'is-danger'}" %>
+        </div>
+        <p class="help">
+          Git user last name to be committed.
+        </p>
+        <% @settings_form.errors.messages[:git_last_name].each do |error| %>
+          <p class="help is-danger"> <%=  error %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Git SSH Key</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= f.text_area :git_ssh, class: "textarea #{@settings_form.errors[:git_ssh].empty? ? '' : 'is-danger'}" %>
+        </div>
+        <p class="help">
+          SSH key to be used to push commits.
+        </p>
+        <% @settings_form.errors.messages[:git_ssh].each do |error| %>
+          <p class="help is-danger"> <%=  error %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-grouped is-grouped-centered">
+    <div class="control">
+      <%= f.submit "Update", class: "button is-primary" %>
+    </div>
+  </div>
+<% end %>

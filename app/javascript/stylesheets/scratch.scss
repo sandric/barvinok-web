@@ -1,0 +1,17 @@
+#code-editor {
+  height: 500px;
+}
+
+#scratch-wrapper {
+  margin-top: 10px;
+
+  #scratch-console {
+    height: 500px;
+    padding-top: 0;
+    text-align: center;
+
+    iframe {
+      height: 500px !important;
+    }
+  }
+}

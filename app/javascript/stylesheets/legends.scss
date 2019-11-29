@@ -1,0 +1,28 @@
+.options {
+  margin-bottom: 10px;
+}
+
+#legends {
+  height: 350px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#commit-preview-wrapper {
+  padding: 0;
+  position: relative;
+  z-index: 10;
+
+  #commit-preview {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: -5px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}

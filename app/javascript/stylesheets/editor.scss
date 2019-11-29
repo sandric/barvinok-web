@@ -1,0 +1,14 @@
+#code-editor {
+  // width: 100%;
+}
+
+.ace_cursor {
+  border: none !important;
+  background: #ff0d004f;
+}
+
+.ace_hidden-cursors .ace_cursor {
+  opacity: 1;
+  background: transparent;
+  border: 1px #ff0d00ef solid;
+}
